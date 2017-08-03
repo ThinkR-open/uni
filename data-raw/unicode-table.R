@@ -35,7 +35,8 @@ read_blocks.txt <- function(){
         list()
     ) %>%
     unnest() %>%
-    select(-step)
+    select(-step) %>%
+    mutate_at( vars(countries, languages, type), str_trim )
 }
 blocks <- read_blocks.txt()
 

@@ -1,0 +1,42 @@
+---
+output: github_document
+---
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "README-"
+)
+```
+
+## Install from github
+
+```{r eval=FALSE}
+install_github( "ThinkRstat/uni" )
+```
+
+```{r echo=FALSE, result="hide", message = FALSE, warning=FALSE}
+library(tidyverse, quietly = TRUE)
+```
+
+
+## Examples
+
+Full unicode table, as a tibble, extracted from [https://github.com/unicode-table/unicode-table-data](https://github.com/unicode-table/unicode-table-data)
+
+```{r}
+uni::code
+```
+
+How many characters are used by each language
+
+```{r}
+uni::code %>%
+  filter( !is.na( languages ) ) %>%
+  mutate( lang = languages %>% str_split(", ") ) %>%
+  select(id, lang) %>%
+  unnest() %>%
+  count(lang, sort = TRUE) 
+```
+

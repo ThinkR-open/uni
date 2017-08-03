@@ -6,7 +6,7 @@
 #' - rune: hexadecimal representation of the rune prefixed with U+
 #' - description: description
 #' - block : block
-#' - countries: ...
-#' - languages: ...
-#' - type: ...
+#' - countries: comma separated list of countries using the character
+#' - languages: comma separated list of languages using the character
+#' - type: type of rune
 "code"
