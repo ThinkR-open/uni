@@ -13,7 +13,7 @@ knitr::opts_chunk$set(
 ## Install from github
 
 ```{r eval=FALSE}
-install_github( "ThinkRstat/uni" )
+install_github( "ThinkR-open/uni" )
 ```
 
 ```{r echo=FALSE, result="hide", message = FALSE, warning=FALSE}
