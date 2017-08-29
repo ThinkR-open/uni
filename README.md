@@ -3,7 +3,7 @@ Install from github
 -------------------
 
 ``` r
-install_github( "ThinkRstat/uni" )
+install_github( "ThinkR-open/uni" )
 ```
 
 Examples
